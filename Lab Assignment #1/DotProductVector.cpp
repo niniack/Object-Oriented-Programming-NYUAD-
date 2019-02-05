@@ -28,7 +28,7 @@ int main ()
 int sum = calc_dot_product(size, v1, v2);
 
 
-cout << "The cross product for vector 1 and vector is: " << sum;
+cout << "The dot product for vector 1 and vector is: " << sum;
 }
 
 int calc_dot_product(int size, vector<int> &v1,  vector<int> &v2)

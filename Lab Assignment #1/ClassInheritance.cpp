@@ -1,4 +1,5 @@
-#include <iostream>
+//comments have not been repeated for various child classes to decrease clutter
+#include <iostream> //input output stream library
 
 using namespace std;
 
@@ -6,8 +7,10 @@ using namespace std;
  class Vehicle
  {
  public:
-   double topSpeed, weight, numSeats, acceleration, numOfWheels;
+   double topSpeed, weight, numSeats, acceleration, numOfWheels; //basic vehicle characteristics
 
+   //simple member functions (getters and setters) for all the characteristics
+   //note the getters directly print to screen
    void setTopSpeed(double newTopSpeed) {topSpeed = newTopSpeed;}
    void getTopSpeed() {cout << topSpeed;}
 
@@ -26,12 +29,14 @@ using namespace std;
 
 //Derived Class: Car
 
-class Car: public Vehicle
+class Car: public Vehicle //class car inherits from public section of class Vehicle
 {
 public:
-  string type = "car";
-  string model, color;
+  string type = "car"; //hardcode the type of vehicle
+  string model, color; //special characteristics
 
+
+  //simple member functions (getters and setters) for special characteristics
   void getType() {cout << type;}
 
   void setModel(string newModel) {model = newModel;}
@@ -40,6 +45,8 @@ public:
   void setColor(string newColor) {color = newColor;}
   void getColor() {cout << color;}
 
+
+  //simple constructor function
   Car (double initTopSpeed, double initWeight, double initNumSeats, double initAcceleration, double initNumOfWheels, string initModel, string initColor)
   {
     topSpeed = initTopSpeed;
@@ -51,6 +58,8 @@ public:
     color = initColor;
   }
 
+  //display function directly prints all characteristics to screen
+  //impliies that child class inherits information from base class
   void display()
   {
     cout << "The vehical type is: " << type << endl;
@@ -149,18 +158,21 @@ public:
 
 int main()
 {
+  //sample instantiations of car objects from Car class
   Car car1 (355, 1480, 2, 3.14, 4, "Ferrari Enzo", "red");
   car1.display();
 
   Car car2 (160, 1890, 8, 6.5, 4, "Toyota Prado", "white");
   car2.display();
 
+  //sample instantiations of bike objects from Bike class
   Bike bike1 (20, 13, 1, 30, 2, "Mountain", "grey");
   bike1.display();
 
   Bike bike2 (25, 9, 1, 25, 2, "Road", "blue");
   bike2.display();
-
+  
+  //sample instantiations of train objects from Train class
   Train train1 (603, 6300, 350, 4, 0, "Maglev", 600);
   train1.display();
 
