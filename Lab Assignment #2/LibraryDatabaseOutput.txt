@@ -1,0 +1,69 @@
+The following is an example of initializing a book outside of the library.
+Title: Welcome to Night Vale
+Author(s): Joseph Fink, Jeffrey Cranor
+Publisher: Harper Perennial
+ISBN: 9780062351427
+Price: $14.31
+In Stock: 15
+
+The following will demonstrate updating the stock number:
+Title: Welcome to Night Vale
+Stock: 15
+
+Title: Welcome to Night Vale
+Stock: 5
+
+The following will demonstrate adding and removing an author:
+Title: Welcome to Night Vale
+Author(s): Joseph Fink, Jeffrey Cranor
+
+Title: Welcome to Night Vale
+Author(s): Joseph Fink, Jeffrey Cranor, Unknown Author
+
+Title: Welcome to Night Vale
+Author(s): Joseph Fink, Jeffrey Cranor
+
+Let's search for the book 'Catch-22' by title and add the author
+Library ID: 2
+Title: Catch-22
+Author(s): 
+Publisher: 
+ISBN: 9780099529118
+Price: $0
+In Stock: 0
+
+Library ID: 2
+Title: Catch-22
+Author(s): Joseph Heller
+Publisher: 
+ISBN: 9780099529118
+Price: $0
+In Stock: 0
+
+Let's search for the book with ISBN 9788026874256 and update the Publisher
+Library ID: 1
+Title: Nineteen Eighty-Four
+Author(s): 
+Publisher: 
+ISBN: 9788026874256
+Price: $0
+In Stock: 0
+
+Library ID: 1
+Title: Nineteen Eighty-Four
+Author(s): 
+Publisher: Penguin Books
+ISBN: 9788026874256
+Price: $0
+In Stock: 0
+
+It is also easy to pass information directly to the constructor from the BookType class as it is inherited. The following book was added to the library using the originally constructed book.
+
+Library ID: 3
+Title: Welcome to Night Vale
+Author(s): Joseph Fink, Jeffrey Cranor
+Publisher: Harper Perennial
+ISBN: 9780062351427
+Price: $14.31
+In Stock: 5
+
