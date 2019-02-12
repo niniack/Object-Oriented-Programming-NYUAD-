@@ -1,0 +1,32 @@
+Account members can be added to the system using the constructor function. All the account information can then be displayed with the display function.
+
+Account Holder Name: John Smith
+Account ID: 1
+Account Type: Debit
+Account Balance: $500
+Account Interest Rate: 2% Annual
+
+
+There are 1 account(s) in the system.
+
+It is also possible to initialize a group of accounts at once. All information does not necessarily have to be input at the time of initialization. The bank account can be initialized with just the name.
+
+There are 11 account(s) in the system.
+
+For example, an account for Alice was initialized with just her name. Alice's information (account type, balance, and interest rate) can then be updated on an individual basis. The ID assigned to her is unchangeable.
+
+Account Holder Name: Alice
+Account ID: 2
+Account Type: Undeclared
+Account Balance: $0
+Account Interest Rate: 0% Annual
+
+Alice's banking information has now been updated.
+
+Account Holder Name: Alice
+Account ID: 2
+Account Type: Credit
+Account Balance: $1000
+Account Interest Rate: 3% Annual
+
+Banking accounts must be initialized with at least a name. Otherwise a dummy account is generated with no unique ID.

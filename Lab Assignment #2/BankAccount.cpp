@@ -118,10 +118,5 @@ int main()
 
   cout << "Banking accounts must be initialized with at least a name. Otherwise a dummy account is generated with no unique ID." << endl;
   BankAccount newAcc();
-  
-
-
-
-
 
 }
