@@ -7,13 +7,14 @@ class BankAccount
 {
 private:
   string name, accType;
-  static int accNumber;
+  static int accNumber; //this variable counts number of objects created
   int accID;
   double balance, interestRate;   //dollars, annual
 
 public:
 
-  //getters and setters
+  //interface for getters and setters (name, accType, number of accounts, ID, balance, interestRate)
+  //note that account number and ID don't have setters
   void setName (string newName);
   void getName ();
 
@@ -31,7 +32,8 @@ public:
 
   void display();
 
-  BankAccount()
+  //default constructor
+  BankAccount ()
   {
     name = "";
     accType = "";
@@ -41,7 +43,8 @@ public:
     accID = 0;
   };
 
-  BankAccount (string initName, string initAccType, double initBalance, double initInterestRate)
+  //constructor
+  BankAccount (string initName, string initAccType="Undeclared", double initBalance=0, double initInterestRate=0)
   {
     name = initName;
     accType = initAccType;
@@ -54,13 +57,14 @@ public:
 
 };
 
+//function definitions
 void BankAccount :: setName (string newName) {name = newName;}
 void BankAccount :: getName() {cout << name << endl;}
 
 void BankAccount :: setType (string newType) {accType = newType;}
 void BankAccount :: getType() {cout << accType << endl;}
 
-void BankAccount :: getAccNumber () {cout << accNumber << endl;}
+void BankAccount :: getAccNumber () {cout << accNumber;}
 void BankAccount :: getAccID () {cout << accID << endl;}
 
 void BankAccount :: setBalance (double newBalance) {balance = newBalance;}
@@ -82,14 +86,42 @@ void BankAccount :: display()
 }
 
 
+//main code
 int main()
 {
+  cout << "Account members can be added to the system using the constructor function. All the account information can then be displayed with the display function." << endl;
+  cout << endl;
   BankAccount acc1("John Smith", "Debit", 500, 2.0);
-  BankAccount acc2 ("Apple Smith", "Debit", 100, 2.0);
-  BankAccount acc3("Banana Smith", "Credit", 1000, 2.0);
   acc1.display();
-  acc2.display();
-  acc3.display();
-  acc1.getAccNumber();
-  //acc2.display();
+  cout << endl;
+
+  cout << "There are "; acc1.getAccNumber(); cout << " account(s) in the system." << endl;
+  cout << endl;
+
+  cout << "It is also possible to initialize a group of accounts at once. All information does not necessarily have to be input at the time of initialization. The bank account can be initialized with just the name." << endl;
+  cout << endl;
+
+  BankAccount accArray[10]={BankAccount("Alice"),BankAccount("Beth"), BankAccount("Catherine"), BankAccount("Drake"), BankAccount("Elijah"), BankAccount("Francis"), BankAccount("George"), BankAccount("Harry"), BankAccount("India"), BankAccount("Jonathan") };
+  cout << "There are "; acc1.getAccNumber(); cout << " account(s) in the system." << endl;
+  cout << endl;
+
+  cout << "For example, an account for Alice was initialized with just her name. Alice's information (account type, balance, and interest rate) can then be updated on an individual basis. The ID assigned to her is unchangeable." << endl;
+  cout << endl;
+  accArray[0].display();
+  accArray[0].setType("Credit");
+  accArray[0].setBalance(1000);
+  accArray[0].setInterestRate(3);
+
+  cout << "Alice's banking information has now been updated." << endl;
+  cout << endl;
+  accArray[0].display();
+
+  cout << "Banking accounts must be initialized with at least a name. Otherwise a dummy account is generated with no unique ID." << endl;
+  BankAccount newAcc();
+  
+
+
+
+
+
 }
