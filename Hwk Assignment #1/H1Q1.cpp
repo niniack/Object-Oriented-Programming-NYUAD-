@@ -6,7 +6,7 @@ void my_func(int size, int *my_arr) //passing an int and a pointer
 {
 	int j; //declaring an int variable j
 
-	int k; //declaring an int variable j
+	int k; //declaring an int variable k
 
 	k = *++my_arr; //incrementing the pointer by one and then dereferencing
 	//incrementing from the 5th element to the 6th element, then setting k equal to the 6th element, k = 30
@@ -26,12 +26,12 @@ void my_func(int size, int *my_arr) //passing an int and a pointer
 
 	my_arr = my_arr + 4; //my_arr goes from the 4th to the 8th element (4+4)
 
-	*my_arr = *my_arr + 3;//the 8th element is 40; this command means set the value at the 8th element to be 40 + 3
+	*my_arr = *my_arr + 3;//the 8th element is 40; this command sets the value at the 8th element to be 40 + 3
 
 	cout<<"4. Answer: "<< *my_arr<<endl; //Output: 4. Answer: 43
 
 	*(my_arr + 1) = *(my_arr - 1) + *(my_arr + 3); //set the 9th element in my_arr to equal the 7th element + the 11th element
-	//however, that shouldn't work well considering there are only 10 elements, thus it will save some gibberish value, say X
+	//however, that shouldn't work properly considering there are only 10 elements, thus it will save some gibberish value, say X
 
 	cout<<"5. Answer: "<< *my_arr<<endl; //Output: 5. Answer: 43
 	//this is still 43 because my_arr was never incremented. Thus, it is still at the 8th element, which was set to 43 previously
@@ -63,9 +63,8 @@ void my_func(int size, int *my_arr) //passing an int and a pointer
 	for(j = 0; j<= size -8; j++) //size=10; thus the condition is j<= 2
 	//this is a for loop that iterates for 3 loops (j=0,1,2)
 	{
-	    *my_arr++; //this command first increments the pointer THEN dereferences it
+	    *my_arr++; //this command increments the pointer, because dereferencing it saves it nowhere
 			//This is different from previous similar commands because there is no variable to save it to;
-			//therefore, it gives preference to the increment rather than the dereferencing
 
 			*my_arr = *my_arr - 2; //the value of new element is then subtracted by two and overwritten to the same location
 
