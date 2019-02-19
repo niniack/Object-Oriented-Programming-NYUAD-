@@ -1,0 +1,53 @@
+Account members can be added to the system using the constructor function. All the checkings account information can then be displayed with the display function.
+
+Checkings Account
+Account Holder: John Smith
+Account ID: 1
+Account Balance: $500
+Account Minimum Balance: $0
+Account Interest Rate: 0%
+Account Service Charge: $0 monthly
+
+
+The initiated account is missing min. balance, interest rate, and service charge data. This can be added using getter functions and displayed using setter functions.
+
+This information has now been updated.
+
+Checkings Account
+Account Holder: John Smith
+Account ID: 1
+Account Balance: $500
+Account Minimum Balance: $100
+Account Interest Rate: 1%
+Account Service Charge: $5 monthly
+
+The checkings account can also confirm that the account balance is above the minimum.
+
+Your balance satsifies the requirement.
+
+Seems good. It is also possible to draft a check, given that you provide a receipient and an amount. The system disallows a check witdhrawal if it exceeds the balance. Let's send $600 to Jacob
+
+Sorry, insufficient funds for transaction
+
+Now, let's send $450 and then verify the balance;
+
+Account Balance: $50
+Your balance is too low!
+
+A savings account may be added to the system.Once again the information can be displayed with the display function.
+
+Savings Account
+Account Holder: Jill Shaw
+Account Balance: $500
+Account Interest Rate: 0%
+
+We will now update the interest rate information.
+Interest Rate: 0.5%
+Both accounts are capable of common requirements such as deposits and withdrawals.
+Accounts can also retrieve their ID.
+
+For John's account: 
+Account ID: 1
+
+For Jill's account: 
+Account ID: 2
