@@ -1,21 +1,22 @@
 using namespace std;
 
-class Person
+class Person //abstract class purely for inheritance
 {
 public:
     string firstName;
     string lastName;
 
-    virtual ~Person() = 0; //required destructor for abstract class
+    virtual ~Person() = 0; //required destructor for class
+    //virtual specifier makes class abstract
 };
 
-class BankAccount : public Person
+class BankAccount : public Person //inherits public info from Person class
 {
 public:
-  int accID;
+  int accID; //unique
   static int accNumber; //this variable counts number of objects created
   double balance;  //dollars, annual
-  bool withdrawable = true;
+  bool withdrawable = true; //used for withdraw balance checking
 
   //default constructor
   BankAccount();
@@ -24,24 +25,25 @@ public:
   BankAccount(string initLastName, string initFirstName, double initBalance);
 
   //interface for getters and setters (name, number of accounts, balance)
-  void func() const;
+  void func() const; //const used to imply that function does not modify object
 
   void setName(string newLastName, string newFirstName);
   void getName() const;
+  void getAccID() const;
 
   void getBalance() const;
   void deposit(int depositValue);
   void withdraw(int withdrawValue);
 
-  virtual void display() const;
+  virtual void display() const; //implies that the BankAccount display function will be overriden by inheriting class
 };
 
-class CheckingAccount : public BankAccount
+class CheckingAccount : public BankAccount //inherits public info from BankAccount class
 {
 protected:
-  float interestRate;
-  double minBalance;
-  double serviceCharge;
+  float interestRate; //dollars, annual
+  double minBalance; //dollars
+  double serviceCharge; //dollars, monthly
 
 public:
   //default constructor
@@ -67,7 +69,7 @@ public:
   void verifyBalance() const;
   void draftCheck(string recipient, double value);
 
-  void display() const override;
+  void display() const override; //implies that the BankAccount display function will be overriden
 };
 
 class SavingsAccount : public BankAccount
