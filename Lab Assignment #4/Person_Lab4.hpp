@@ -1,10 +1,13 @@
-using namespace std;
+#include <string>
 
 class Person //this class is an abstract class as it should never be instantiated
 {
 public:
-  string firstName;
-  string lastName;
+  std::string firstName;
+  std::string lastName;
 
-  Person(string initFirstName, string initLastName); //constructor function
+  Person(); //default constructor
+
+  Person(std::string initFirstName, std::string initLastName); //constructor function
+
 };

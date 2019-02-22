@@ -1,6 +1,6 @@
-#include "BankAccount_Lab4.hpp"
-
-using namespace std;
+#include <string>
+#include <stdlib.h>
+#include <stdio.h>
 
 class SavingsAccount : public BankAccount
 {
@@ -11,8 +11,8 @@ public:
   SavingsAccount();
 
   //constructor
-  SavingsAccount(string initLastName,
-                  string initFirstName,
+  SavingsAccount( std::string initLastName,
+                  std::string initFirstName,
                   double initBalance,
                   float initInterestRate);
 

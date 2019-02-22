@@ -1,6 +1,6 @@
-#include "BankAccount_Lab4.hpp"
-
-using namespace std;
+#include <string>
+#include <stdlib.h>
+#include <stdio.h>
 
 class CheckingAccount : public BankAccount //inherits public info from BankAccount class
 {
@@ -14,8 +14,8 @@ public:
   CheckingAccount();
 
   //constructor
-  CheckingAccount(string initLastName,
-                  string initFirstName,
+  CheckingAccount(std::string initLastName,
+                  std::string initFirstName,
                   double initBalance,
                   double initMinBalance,
                   float initInterestRate,
@@ -31,7 +31,7 @@ public:
   void getServiceCharge() const;
 
   void verifyBalance() const;
-  void draftCheck(string recipient, double value);
+  void draftCheck(std::string recipient, double value);
 
   void withdraw(int withdrawValue);
   void deposit(int depositValue);

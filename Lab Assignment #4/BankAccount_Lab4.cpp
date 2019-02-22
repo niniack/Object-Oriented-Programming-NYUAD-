@@ -1,15 +1,14 @@
 #include <iostream>
-#include <string.h>
 #include "BankAccount_Lab4.hpp"
-
 using namespace std;
+
 
 //function definitions for BankAccount class
 BankAccount :: BankAccount() {};
 BankAccount :: BankAccount(string initLastName, string initFirstName, double initBalance)
 {
-  lastName = initLastName;
-  firstName = initFirstName;
+  person.lastName = initLastName;
+  person.firstName = initFirstName;
   balance = initBalance;
 };
 
@@ -30,7 +29,7 @@ int BankAccount :: accNumber = 0; //must be initiated to zero to start counting
 void BankAccount :: display() const
 {
   cout << endl;
-  cout << "Account Holder: " << firstName << " " << lastName << endl;
+  cout << "Account Holder: " << person.firstName << " " << person.lastName << endl;
   cout << "Account Balance: $" << balance << endl;
   cout << endl;
 }

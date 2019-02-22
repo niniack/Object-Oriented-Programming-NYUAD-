@@ -1,6 +1,6 @@
-#include "Person_Lab4.hpp"
+#include <string>
 
-using namespace std;
+class Person;
 
 class BankAccount //abstract class
 {
@@ -8,19 +8,19 @@ public:
   int accID; //unique
   static int accNumber; //this variable counts number of objects created
   double balance;  //dollars, annual
-  Person person;
+  Person person();
   bool withdrawable = true; //used for withdraw balance checking
 
   //default constructor
   BankAccount();
 
   //constructor
-  BankAccount(string initLastName, string initFirstName, double initBalance);
+  BankAccount(std::string initLastName, std::string initFirstName, double initBalance);
 
   //interface for getters and setters (name, number of accounts, balance)
   void func() const; //const used to imply that function does not modify object
 
-  void setName(string newLastName, string newFirstName);
+  void setName(std::string newLastName, std::string newFirstName);
   void getName() const;
   void getAccID() const;
 
