@@ -1,0 +1,39 @@
+This program demonstrates what it means to have a virtual function
+Note that the BankAccount class is abstract and has a derived class SavingsAccount
+A base class pointer is then defined as the address of a derived class object.
+
+The program has now instantiated an object for Jill Shaw.
+
+This is the original information:
+
+Savings Account
+Account Holder: Jill Shaw
+Account Balance: $500
+Account Interest Rate: 0.5%
+
+Now we will call the withdraw function, which is by definition virtual.
+Thus the program is 'smart' enough to call the withdraw function from the derived class.
+
+'This output was hardcoded: this withdraw function belongs in the SavingsAccount class.'
+
+Savings Account
+Account Holder: Jill Shaw
+Account Balance: $450
+Account Interest Rate: 0.5%
+
+Surely enough, the function did deduct 50 because the derived class' function was called.
+
+Now we will call the deposit function, which is NOT virtual.
+Thus the program is NOT 'smart' enough to call the deposit function from the derived class.
+
+Instead it calls the function from the base class, which does nothing but print this message: 
+'This output was hardcoded: this deposit function belongs in the BankAccount class.'
+
+To confirm, we can call the display function and check whether 50 were added back.
+
+Savings Account
+Account Holder: Jill Shaw
+Account Balance: $450
+Account Interest Rate: 0.5%
+
+Confirmed by the printed information, no amount was added back because the base class is incapable of doing so.

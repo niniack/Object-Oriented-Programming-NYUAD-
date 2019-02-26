@@ -1,13 +1,20 @@
+#ifndef PERSON_HPP
+#define PERSON_HPP
+
+
+
 #include <string>
 
 class Person //this class is an abstract class as it should never be instantiated
 {
 public:
-  std::string firstName;
-  std::string lastName;
+std::string firstName;
+std::string lastName;
 
-  Person(); //default constructor
+Person();   //default constructor
 
-  Person(std::string initFirstName, std::string initLastName); //constructor function
-
+Person(std::string initFirstName, std::string initLastName);   //constructor function
 };
+
+
+#endif

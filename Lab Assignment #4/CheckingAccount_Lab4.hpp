@@ -1,40 +1,46 @@
+#ifndef  CHECKINGACCOUNT_HPP
+#define  CHECKINGACCOUNT_HPP
 #include <string>
-#include <stdlib.h>
-#include <stdio.h>
+
+#include "BankAccount_Lab4.hpp"
 
 class CheckingAccount : public BankAccount //inherits public info from BankAccount class
 {
 protected:
-  float interestRate; //dollars, annual
-  double minBalance; //dollars
-  double serviceCharge; //dollars, monthly
+float interestRate;   //dollars, annual
+double minBalance;   //dollars
+double serviceCharge;   //dollars, monthly
 
 public:
-  //default constructor
-  CheckingAccount();
+//default constructor
+CheckingAccount();
 
-  //constructor
-  CheckingAccount(std::string initLastName,
-                  std::string initFirstName,
-                  double initBalance,
-                  double initMinBalance,
-                  float initInterestRate,
-                  double initServiceCharge);
+//constructor
+CheckingAccount(std::string initLastName,
+                std::string initFirstName,
+                double initBalance,
+                double initMinBalance,
+                float initInterestRate,
+                double initServiceCharge);
 
-  void setInterestRate(float newInterestRate);
-  void getInterestRate() const;
+~CheckingAccount();
 
-  void setMinBalance(double newMinBalance);
-  void getMinBalance() const;
+void setInterestRate(float newInterestRate);
+void getInterestRate() const;
 
-  void setServiceCharge(double newServiceCharge);
-  void getServiceCharge() const;
+void setMinBalance(double newMinBalance);
+void getMinBalance() const;
 
-  void verifyBalance() const;
-  void draftCheck(std::string recipient, double value);
+void setServiceCharge(double newServiceCharge);
+void getServiceCharge() const;
 
-  void withdraw(int withdrawValue);
-  void deposit(int depositValue);
+void verifyBalance() const;
+void draftCheck(std::string recipient, double value);
 
-  void display() const override; //implies that the BankAccount display function will be overriden
+void withdraw(int withdrawValue);
+void deposit(int depositValue);
+
+void display() const;   //implies that the BankAccount display function will be overriden
 };
+
+#endif

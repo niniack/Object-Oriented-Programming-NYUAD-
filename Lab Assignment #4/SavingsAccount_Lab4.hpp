@@ -1,27 +1,32 @@
+#ifndef SAVINGSACCOUNT_HPP
+#define SAVINGSACCOUNT_HPP
+
+#include "BankAccount_Lab4.hpp"
+
 #include <string>
-#include <stdlib.h>
-#include <stdio.h>
+
 
 class SavingsAccount : public BankAccount
 {
 public:
-  float interestRate;
+float interestRate;
 
-  //default constructor
-  SavingsAccount();
+//default constructor
+SavingsAccount();
 
-  //constructor
-  SavingsAccount( std::string initLastName,
-                  std::string initFirstName,
-                  double initBalance,
-                  float initInterestRate);
+~SavingsAccount();
 
-  void setInterestRate(float newInterestRate);
-  void getInterestRate() const;
+//constructor
+SavingsAccount(std::string initLastName, std::string initFirstName, double initBalance, float initInterestRate);
 
-  void withdraw(int withdrawValue);
-  void deposit(int depositValue);
+void setInterestRate(float newInterestRate);
+void getInterestRate() const;
 
-  void display() const override;
+void withdraw(int withdrawValue);
+void deposit(int depositValue);
+
+void display() const;
 
 };
+
+#endif
