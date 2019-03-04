@@ -1,0 +1,35 @@
+This program demonstrates the use of an account container.
+
+Three savings accounts have been instantiated and will added to the account manager
+
+The bank can simply call the display function to view all the accounts stored by the person.
+Here are all the accounts held by Jill Shaw in this group:
+
+Savings Account
+Account ID: 1
+Account Holder: Jill Shaw
+Account Balance: $500
+Account Interest Rate: 0.5%
+
+
+Savings Account
+Account ID: 2
+Account Holder: Jill Shaw
+Account Balance: $600
+Account Interest Rate: 0.5%
+
+
+Savings Account
+Account ID: 3
+Account Holder: Jill Shaw
+Account Balance: $1000
+Account Interest Rate: 0.8%
+
+The bank can also call the quick display function to view how many accounts are stored in the manager:
+
+There are 3 accounts held by Jill Shaw
+
+The program also prevents the adding of another user's to a given user's account manager.
+
+You are trying to add an account from Jill Shaw to an account group held by James Shaw
+This action is forbidden.
