@@ -19,12 +19,11 @@ ostream & operator << (ostream &out, const Person &person) //overloading the << 
         return out;
 }
 
-bool operator == (const Person &person1, const Person &person2)
+bool Person :: operator == (const Person &person2) const
 {
-        if (person1.firstName == person2.firstName && person1.lastName == person2.lastName)
-        {
+        if (this->firstName == person2.firstName && this->lastName == person2.lastName)
+
                 return true;
-        }
 
         else
                 return false;

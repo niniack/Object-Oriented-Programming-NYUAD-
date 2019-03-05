@@ -18,7 +18,7 @@ Person(std::string initFirstName, std::string initLastName);   //constructor fun
 
 friend std ::ostream & operator << (std::ostream &out, const Person &person); //use of friend function for overloading << operator
 
-friend bool operator == (const Person &person1, const Person &person2); //use of friend function for overloading boolean operator
+bool operator == (const Person &person2) const; //use of friend function for overloading boolean operator
 
 };
 
