@@ -1,0 +1,5 @@
+In file included from /home/nishantaswani/github/Object-Oriented-Programming-NYUAD-/Lab Assignment #6/main.cpp:10:0:
+/home/nishantaswani/github/Object-Oriented-Programming-NYUAD-/Lab Assignment #6/AccountManager_Lab6.cpp: In member function ‘void AccountManager<T, T2>::push(T2)’:
+/home/nishantaswani/github/Object-Oriented-Programming-NYUAD-/Lab Assignment #6/AccountManager_Lab6.cpp:42:40: error: expected primary-expression before ‘;’ token
+                         throw bad_alloc;
+                                        ^

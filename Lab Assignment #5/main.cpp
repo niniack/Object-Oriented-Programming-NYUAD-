@@ -10,10 +10,10 @@
 #include "AccountManager_Lab5.cpp"
 
 
-#include "CheckingAccount_Lab5.cpp"
-#include "SavingsAccount_Lab5.cpp"
-#include "BankAccount_Lab5.cpp"
-#include "Person_Lab5.cpp"
+// #include "CheckingAccount_Lab5.cpp"
+// #include "SavingsAccount_Lab5.cpp"
+// #include "BankAccount_Lab5.cpp"
+// #include "Person_Lab5.cpp"
 
 
 using namespace std;
